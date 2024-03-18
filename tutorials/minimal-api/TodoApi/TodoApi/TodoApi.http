@@ -1,4 +1,4 @@
-﻿@TodoApi_HostAddress = https://localhost:7076
+﻿@TodoApi_HostAddress = https://localhost:32768
 
 GET {{TodoApi_HostAddress}}/todoitems
 
@@ -37,6 +37,10 @@ GET {{TodoApi_HostAddress}}/todoitems/
 ###
 
 GET {{TodoApi_HostAddress}}/todoitems/{id}
+
+###
+
+POST {{TodoApi_HostAddress}}/todoitems/
 
 ###
 
