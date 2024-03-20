@@ -28,7 +28,7 @@ namespace Catalog.API.Products.CreateProduct
             // Save to database
 
             // Return the result
-            return new CreateProductResult(new Guid());
+            return new CreateProductResult(Guid.NewGuid());
         }
     }
 }
