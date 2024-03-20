@@ -1,15 +1,16 @@
-﻿using MediatR;
+﻿using BuildingBlocks.CQRS;
 
 namespace Catalog.API.Products.CreateProduct
 {
 
     public record CreateProductCommand(string Name, List<string> Category, string Summary, string Description, string ImageFile, decimal Price)
-        : IRequest<CreateProductResult>;
+        : ICommand<CreateProductResult>;
     public record CreateProductResult(Guid Id);
 
-    internal class CreateProductHandler : IRequestHandler<CreateProductCommand, CreateProductResult>
+    internal class CreateProductCommandHandler 
+        : ICommandHandler<CreateProductCommand, CreateProductResult>
     {
-        public Task<CreateProductResult> Handle(CreateProductCommand request, CancellationToken cancellationToken)
+        public Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
             // Business logic to create a product
             throw new NotImplementedException();
