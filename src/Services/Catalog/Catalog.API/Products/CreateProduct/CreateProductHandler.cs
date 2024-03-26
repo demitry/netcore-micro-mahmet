@@ -12,6 +12,7 @@ internal class CreateProductCommandHandler (IDocumentSession session)
         // Create a product entity from incoming command
         var product = new Product
         {
+            Id = Guid.NewGuid().ToString(),
             Name = command.Name,
             Category = command.Category,
             Summary = command.Summary,
